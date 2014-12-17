@@ -11,8 +11,10 @@
     "mthaml/mthaml": "dev-master",
     "zacoza/laravel-twigbridge": "dev-master",
     "xethron/migrations-generator": "dev-master",
-    "rhumsaa/uuid": "~2.7"
-	},
+    "rhumsaa/uuid": "~2.7",
+    "way/generators": "~2.0",
+    "pingpong/admin": "1.*"
+  },
 	"autoload": {
 		"classmap": [
 			"app/commands",
@@ -30,8 +32,7 @@
 		],
 		"post-update-cmd": [
 			"php artisan clear-compiled",
-			"php artisan optimize",
-            "php artisan debugbar:publish"
+			"php artisan optimize"
 		],
 		"post-create-project-cmd": [
 			"php artisan key:generate"

@@ -126,6 +126,8 @@ return array(
         'ZaCoZa\TwigBridge\ServiceProvider',
         'Way\Generators\GeneratorsServiceProvider',
         'Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider',
+        'Pingpong\Admin\Providers\SupportServiceProvider',
+        'Pingpong\Admin\AdminServiceProvider',
 	),
 
 	/*
