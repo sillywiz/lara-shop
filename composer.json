@@ -8,8 +8,10 @@
 		"laravel/framework": "4.2.*",
 		"barryvdh/laravel-ide-helper": "1.*",
 		"barryvdh/laravel-debugbar": "dev-master",
-        "mthaml/mthaml": "dev-master",
-        "zacoza/laravel-twigbridge": "dev-master"
+    "mthaml/mthaml": "dev-master",
+    "zacoza/laravel-twigbridge": "dev-master",
+    "xethron/migrations-generator": "dev-master",
+    "rhumsaa/uuid": "~2.7"
 	},
 	"autoload": {
 		"classmap": [

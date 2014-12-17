@@ -1,3 +1,8 @@
+SetEnv DB_HOST localhost
+SetEnv DB_NAME lara-shop
+SetEnv DB_USER root
+SetEnv DB_PASS
+
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews
