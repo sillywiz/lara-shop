@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => false,
+	'debug' => true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -121,14 +121,16 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+        'ZaCoZa\TwigBridge\ServiceProvider',
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
         'Barryvdh\Debugbar\ServiceProvider',
-        'ZaCoZa\TwigBridge\ServiceProvider',
         'Way\Generators\GeneratorsServiceProvider',
         'Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider',
         'Pingpong\Admin\Providers\SupportServiceProvider',
         'Pingpong\Admin\AdminServiceProvider',
-	),
+        'Cviebrock\EloquentSluggable\SluggableServiceProvider',
+
+    ),
 
 	/*
 	|--------------------------------------------------------------------------

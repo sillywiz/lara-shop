@@ -13,7 +13,8 @@
     "xethron/migrations-generator": "dev-master",
     "rhumsaa/uuid": "~2.7",
     "way/generators": "~2.0",
-    "pingpong/admin": "1.*"
+    "pingpong/admin": "1.*",
+		"cviebrock/eloquent-sluggable": "~2.0"
   },
 	"autoload": {
 		"classmap": [

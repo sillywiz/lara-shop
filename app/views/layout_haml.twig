@@ -1,0 +1,42 @@
+{% haml %}
+!!!
+%html(lang="en")
+%head
+  %meta(charset="utf-8")
+  %meta(http-equiv="X-UA-Compatible" content="IE=edge")
+  %title = title | default("My Title")
+  %meta(name="description" content="")
+  %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  %link(href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet")
+  - block styles
+    != HTML.style("/assets/css/style.css")
+
+%body
+  %nav.navbar.navbar-inverse(role="navigation")
+    .container
+      .navbar-header
+        %button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-collapse")
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand(href="!=url('/')")
+      .collapse.navbar-collapse
+        %ul.nav.navbar-nav.navbar-right
+          %li
+            %a(href="#") About
+          %li
+            %a(href="#") Services
+          %li
+            %a(href="#") Contact
+
+  .container
+    - block content ''
+    %footer
+      .row
+        .col-md-12 Created by
+
+  %script(type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js")
+  %script(type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js")
+
+  - block scripts ''
