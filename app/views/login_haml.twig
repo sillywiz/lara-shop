@@ -1,0 +1,14 @@
+{% haml %}
+
+%h1 Login
+%form
+  %p
+    != Form.label('username', 'Username')
+    %br
+    != Form.text('username')
+  %p
+    != Form.label('password', 'Password')
+    %br
+    != Form.password('password')
+  %p
+    != Form.submit('Login')

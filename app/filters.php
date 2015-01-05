@@ -32,6 +32,22 @@ App::after(function($request, $response)
 | integrates HTTP Basic authentication for quick, simple checking.
 |
 */
+Route::filter('serviceAuth', function(){
+    if(!Auth::check()){
+        return Response::json([
+            'status' => 'error',
+            'message' => 'Access Denied.'
+        ], 401);
+    }
+});
+
+Route::filter('serviceCSRF',function(){
+    if (Session::token() != Request::header('csrf_token')) {
+        return Response::json([
+            'message' => "I'm a teapot."
+        ], 418);
+    }
+});
 
 Route::filter('auth', function()
 {

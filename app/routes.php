@@ -11,7 +11,12 @@
 |
 */
 
-Route::get('/', function()
+Route::get('/', 'HomeController@showWelcome');
+
+Route::resource('registration', 'RegistrationController',
+    array('only' => array('index', 'store')));
+
+Route::get('template/{name}', function($name)
 {
-	return View::make('hello');
+	return View::make($name . '_haml');
 });

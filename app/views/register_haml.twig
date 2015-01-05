@@ -1,0 +1,22 @@
+{% haml %}
+
+%h1 Register
+
+%alert( ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)")
+  %p#message
+    {{alert.msg}}
+%form(ng-submit="registrationForm.$valid && registration()" novalidate="" name="registrationForm")
+  %p
+    != Form.label('username', 'Username')
+    %br
+    != Form.text('username', '', {"autofocus": "True", "required": "true", "ng-model": "username"})
+  %p
+    != Form.label('password', 'Password')
+    %br
+    != Form.password('password', {"required" : "true", "ng-model": "required", "ng-model": "password"})
+  %p
+    != Form.label('password_confirmation', 'Confirm Password')
+    %br
+    != Form.password('password_confirmation', {"required" : "true", "ng-model": "password_confirmation"})
+  %p
+    != Form.submit('Register')
